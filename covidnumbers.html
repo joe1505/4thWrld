@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link rel=StyleSheet href="../basic.css" TYPE="text/css">
+</head>
+<body>
+<div class="rightimage">
+<img src="covidnumbers.png" width="587" height="392" alt="COVID-19 numbers from Wikipedia">
+</div>
+<h1>Why the Covid Numbers are Alarming</h1>
+<p>Let me start by saying that I'm not a healthcare professional, first responder,
+or even a politician. But I do spend a lot of time working with numbers and trying
+to figure out what they are saying. And the Covid-19 numbers scare me. I did some
+quick calculations based on what the US has experienced so far. Those calculations
+suggest the US could have millions infected and thousands dead in just a few weeks. 
+<p> The current numbers are not the scary part.
+The current total of 81,783 infected as of March 26 is significant, but not
+that big of a number for a country the size of the United States. Even the number
+of 1,147 dead is a tragedy for those infected but not very big compared to
+deaths from other causes in the US.
+<p> What's scary is the trend &mdash; the rate of increase in the numbers. From
+March 4 to March 23 the number of infected people went from 111 to 42752; that's
+an increase of almost 37% per day or nearly a factor of 9 per week. The death
+rate increase is harder to estimate than the infection rate because the numbers are
+a lot smaller, but they seem to be following a similar rate of increase.
+<p> The rate of increase in the infection rate has been a bit lower the last couple
+of days &mdash; in the 20 to 25% range. If those numbers hold, they could be an
+indication that the stay-at-home orders and other measures are succeeding in
+slowing the spread of the virus.  That's not comforting, but better than 37%.
+<p> Here's a quick back-of-the-envelope rough calculation to see what these numbers
+might imply for the future. I calculated the infection
+and death counts for 17 days out starting from March 24 (which brings us to Easter)
+and assuming 10%, 20%, or 30% rate of increase. I chose these numbers because 10%
+is in the range that Italy is seeing with a tight lockdown, 20% is around what
+the US has seen for a couple of days, and 30% is a bit more optimistic than
+the long-term US experience of 37%.
+<p> So, starting from 81,783 and 1,147 on March 26, then on Easter (April 12) we would
+have:
+<br>10% daily increase gives 413370 infected and 5797 dead
+<br>20% daily increase gives 1814447 infected and 25447 dead
+<br>30% daily increase gives 13438076 infected and 188468 dead
+<h2>Are these estimates real, and why so big?</h2>
+<p> The estimates depend on a lot of assumptions.  I include links to the source data
+and calculations below, so others can evaulate how realistic my assumptions are.
+<p> A number that increases by a fixed percentage every day is what mathematicians
+call "exponential increase." As you can see in the diagram at the top of this page
+(from Wikipedia), exponential increase starts out deceptively slowly, but then grows
+rapidly. Viruses and other infections are a classic example of things that tend to
+grow exponentially until they run out of new hosts to infect.
+<p> So when does exponential growth slow down? I don't know, but there are several
+possibilities:
+<ul>
+  <li>A vaccine or some other treatment stops the spread to new patients;</li> 
+  <li>We minimize opportunities for the virus to spread (isolation, protection,
+      disinfection);</li>
+  <li>Most of those who can be infected in a particular area are already infected.</li>
+</ul>
+<h2>Data, Programs, more Info</h2>
+<ol>
+<li> The US infection and death rates (including the chart above) are taken from
+    <a href="https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_the_United_States"
+        >en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_the_United_States</a>.
+<li> For comparison, Italy's results are at
+    <a href="https://en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Italy"
+       >en.wikipedia.org/wiki/2020_coronavirus_outbreak_in_Italy</a>
+<li> My calculations are in
+    <a href="covidnumbers.m">covidnumbers.m</a>, which also needs
+    <a href="us_data.m">us_data.m</a>. These are scripts for the Octave
+    computing package, which is freely available from
+    <a href="https://wiki.octave.org/Octave_for_Microsoft_Windows"
+       >wiki.octave.org/Octave_for_Microsoft_Windows</a>. Octave scripts
+       are also more-or-less compatible with Matlab, if you have that.
+<li> I like to overview of exponential growth and COVID-19 in
+     <a href="https://www.forbes.com/sites/startswithabang/2020/03/17/why-exponential-growth-is-so-scary-for-the-covid-19-coronavirus/"
+        >www.forbes.com/sites/startswithabang/2020/03/17/why-exponential-growth-is-so-scary-for-the-covid-19-coronavirus</a>
+<li> A more detailed and technical exposition of exponential growth is
+      <a href="https://en.wikipedia.org/wiki/Exponential_growth"
+         >en.wikipedia.org/wiki/Exponential_growth</a>
+</ol>
+</body>
+</html>
